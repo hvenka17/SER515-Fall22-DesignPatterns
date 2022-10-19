@@ -2,8 +2,6 @@ public abstract class NodeVisitor {
 
 	private NodeVisitor nodeVisitor;
 
-	private NodeVisitor nodeVisitor;
-
 	public abstract void visitProduct(Product product);
 
 	public abstract void visitTrading(Trading trading);

@@ -1,6 +1,6 @@
-public class OfferingList extends ArrayList {
+import java.util.ArrayList;
 
-	private OfferingList offeringList;
+public class OfferingList extends ArrayList {
 
 	private OfferingList offeringList;
 
