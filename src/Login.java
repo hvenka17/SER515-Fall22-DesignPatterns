@@ -52,6 +52,7 @@ public class Login {
     }
 
     public boolean authorizeUser(String username, String password) {
-        return buyers.get(username).equals(password) || sellers.get(username).equals(password);
+        return buyers.containsKey(username) && buyers.get(username).equals(password)
+                || sellers.containsKey(username) && sellers.get(username).equals(password);
     }
 }

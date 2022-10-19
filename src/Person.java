@@ -21,7 +21,7 @@ public abstract class Person {
 		int option = scanner.nextInt();
 		if (option == 1) {
 			new MeatProductMenu().showMenu();
-		} else {
+		} else if (option == 2) {
 			new ProduceProductMenu().showMenu();
 		}
 	}

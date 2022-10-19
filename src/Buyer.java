@@ -8,19 +8,21 @@ public class Buyer extends Person {
 	}
 	public void showMenu() {
 		System.out.println("Buyer menu:");
-		System.out.println("1)View products\t2)View my bids");
+		System.out.println("1)View products\t2)View my bids\t3)Logout");
 		System.out.print("Choose an option: ");
 		Scanner scanner = new Scanner(System.in);
-		int option = scanner.nextInt();
-		switch (option) {
-			case 1:
+		while (true) {
+			int option = scanner.nextInt();
+			if (option == 1) {
 				showProductMenu();
-				break;
-			case 2:
+			} else if (option == 2) {
 				System.out.println("No bids made");
+			} else if (option == 3) {
+				System.out.println("Bye!");
 				break;
-			default:
-				System.out.println("Invalid option");
+			} else {
+				System.out.println("Invalid option! Please try again");
+			}
 		}
 	}
 
