@@ -44,15 +44,14 @@ public class Login {
 
     public Person findPerson(String username) throws PersonNotFoundException {
         if(this.buyers.containsKey(username))
-            return new Buyer();
+            return new Buyer(username);
         else if(this.sellers.containsKey(username))
-            return new Seller();
+            return new Seller(username);
         else
             throw new PersonNotFoundException(username);
     }
 
-    public boolean authorizeUser(int personType, String username, String password) {
-        Map<String, String> personCredentials = (personType == 0) ? buyers : sellers;
-        return personCredentials.get(username).equals(password);
+    public boolean authorizeUser(String username, String password) {
+        return buyers.get(username).equals(password) || sellers.get(username).equals(password);
     }
 }

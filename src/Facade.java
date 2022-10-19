@@ -22,12 +22,15 @@ public class Facade {
 		System.out.print("Enter username: ");
 		String username = scanner.nextLine();
 
-		this.thePerson = login.findPerson(username);
-		setUserType();
-
 		System.out.print("Enter password: ");
 		String password = scanner.nextLine();
-		return login.authorizeUser(this.UserType, username, password);
+
+		if (login.authorizeUser(username, password)) {
+			this.thePerson = login.findPerson(username);
+			setUserType();
+			return true;
+		} else
+			return false;
 	}
 
 	private void setUserType() {
@@ -42,7 +45,7 @@ public class Facade {
 	}
 
 	public void viewTrading() {
-
+		this.thePerson.showMenu();
 	}
 
 	public void decideBidding() {

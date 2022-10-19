@@ -1,5 +1,9 @@
 public class OfferingIterator implements ListIterator {
 
+	public OfferingIterator() {
+		System.out.println(">>>> ITERATOR PATTERN <<<<");
+	}
+
 	private OfferingList offeringList;
 
 	public boolean hasNext() {

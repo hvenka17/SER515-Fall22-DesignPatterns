@@ -4,4 +4,10 @@ public class Product {
 
 	private Trading trading;
 
+	public String name;
+
+	public Product(String name) {
+		this.name = name;
+	}
+
 }
