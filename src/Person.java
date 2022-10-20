@@ -7,7 +7,7 @@ public abstract class Person {
 //	private ProductMenu productMenu;
 
 	public Person() {
-		System.out.println(">>>> BRIDGE PATTERN <<<<");
+		System.out.println("\n>>>> BRIDGE PATTERN <<<<\n");
 	}
 
 	public String username;

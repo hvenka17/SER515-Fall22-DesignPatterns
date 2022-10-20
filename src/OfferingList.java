@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class OfferingList extends ArrayList {
 
@@ -8,6 +10,11 @@ public class OfferingList extends ArrayList {
 
 	private Trading trading;
 
-	private Offering[] offering;
+	private List<Offering> offering;
+
+	public boolean addOffering(String productName, String sellerName) {
+		Offering offering1 = new Offering(productName, sellerName);
+		return offering.add(offering1);
+	}
 
 }

@@ -1,3 +1,4 @@
+import java.util.List;
 import java.util.Scanner;
 
 public class Seller extends Person {
@@ -14,7 +15,8 @@ public class Seller extends Person {
 		while (true) {
 			int option = scanner.nextInt();
 			if (option == 1) {
-				showProductMenu();
+				OfferingIterator offeringIterator = new OfferingIterator();
+				System.out.println("Offerings: " + offeringIterator.retrieveOfferings(List.of(this.username)));
 			} else if (option == 2) {
 				System.out.println("No offerings made");
 			} else if (option == 3) {

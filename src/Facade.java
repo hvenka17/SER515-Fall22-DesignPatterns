@@ -13,7 +13,7 @@ public class Facade {
 	private Person thePerson;
 
 	public Facade() {
-		System.out.println(">>>> FACADE PATTERN <<<<");
+		System.out.println("\n>>>> FACADE PATTERN <<<<\n");
 	}
 
 	public boolean login() throws PersonNotFoundException {

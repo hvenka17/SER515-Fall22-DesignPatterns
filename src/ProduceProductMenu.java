@@ -3,7 +3,8 @@ import java.util.Scanner;
 public class ProduceProductMenu implements ProductMenu {
 
 	public ProduceProductMenu() {
-		System.out.println(">>>> FACTORY METHOD PATTERN <<<<");
+		System.out.println("\n>>>> FACTORY METHOD PATTERN <<<<\n");
+		System.out.println("Instantiating ProduceProductMenu");
 	}
 
 	public void showMenu() {
@@ -24,7 +25,7 @@ public class ProduceProductMenu implements ProductMenu {
 	}
 
 	public void showViewButton() {
-		Product produceProduct = new ProductIterator("Meat").next();
+		Product produceProduct = new ProductIterator("Produce").next();
 		System.out.println("Produce product: " + produceProduct.name);
 	}
 

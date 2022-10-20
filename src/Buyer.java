@@ -7,11 +7,11 @@ public class Buyer extends Person {
 		this.username = name;
 	}
 	public void showMenu() {
-		System.out.println("Buyer menu:");
-		System.out.println("1)View products\t2)View my bids\t3)Logout");
-		System.out.print("Choose an option: ");
 		Scanner scanner = new Scanner(System.in);
 		while (true) {
+			System.out.println("\n\nBuyer menu:");
+			System.out.println("1)View products\t2)View my bids\t3)Logout");
+			System.out.print("Choose an option: ");
 			int option = scanner.nextInt();
 			if (option == 1) {
 				showProductMenu();

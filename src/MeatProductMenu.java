@@ -2,7 +2,8 @@ import java.util.Scanner;
 
 public class MeatProductMenu implements ProductMenu {
 	public MeatProductMenu() {
-		System.out.println(">>>> FACTORY METHOD PATTERN <<<<");
+		System.out.println("\n>>>> FACTORY METHOD PATTERN <<<<\n");
+		System.out.println("Instantiating MeatProductMenu");
 	}
 
 	public void showMenu() {
@@ -23,8 +24,11 @@ public class MeatProductMenu implements ProductMenu {
 	}
 
 	public void showViewButton() {
-		Product meatProduct = new ProductIterator("Meat").next();
-		System.out.println("Meat product: " + meatProduct.name);
+		ProductIterator meatProductsIterator = new ProductIterator("Meat");
+		while (meatProductsIterator.hasNext()) {
+			Product meatProduct = meatProductsIterator.next();
+			System.out.println("Meat product: " + meatProduct.name);
+		}
 	}
 
 	public void showRadioButton() {
