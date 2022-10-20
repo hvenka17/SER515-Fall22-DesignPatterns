@@ -9,8 +9,8 @@ public class Buyer extends Person {
 	public void showMenu() {
 		Scanner scanner = new Scanner(System.in);
 		while (true) {
-			System.out.println("\n\nBuyer menu:");
-			System.out.println("1)View products\t2)View my bids\t3)Logout");
+			System.out.println("\nBuyer menu for " + this.username + ":");
+			System.out.println("1)View product types\t2)View my bids\t3)Logout");
 			System.out.print("Choose an option: ");
 			int option = scanner.nextInt();
 			if (option == 1) {

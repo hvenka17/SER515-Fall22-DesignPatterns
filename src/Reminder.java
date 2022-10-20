@@ -12,7 +12,7 @@ public class Reminder {
         return reminder;
     }
 
-    public void notifyOffering() {
-
+    public void notifyOffering(String productName) {
+        System.out.println("Notifying all buyers about offerings changed for " + productName);
     }
 }

@@ -15,7 +15,7 @@ public abstract class Person {
 	public abstract void showMenu();
 
 	public void showProductMenu() {
-		System.out.println("1)Meat\t2)Produce");
+		System.out.println("\n1)Meat\t2)Produce");
 		System.out.print("Choose an option: ");
 		Scanner scanner = new Scanner(System.in);
 		int option = scanner.nextInt();

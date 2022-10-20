@@ -43,7 +43,6 @@ public class OfferingIterator implements ListIterator {
 				if (sellers.contains(productInfo[0])) {
 					list.add(new Offering(productInfo[1], productInfo[0]));
 				}
-				System.out.println();
 			}
 		} catch (FileNotFoundException e) {
 			System.out.println("File not found - " + e.getMessage());
