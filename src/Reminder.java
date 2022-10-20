@@ -2,9 +2,7 @@ public class Reminder {
 
     private static Reminder reminder;
 
-    private Reminder() {
-        System.out.println("\n>>>> VISITOR PATTERN <<<<\n");
-    }
+    private Reminder() {}
 
     public static Reminder getInstance() {
         if (reminder == null)
