@@ -25,8 +25,7 @@ public class Seller extends Person {
 				for (int i=0; i<offerings.size(); i++) {
 					System.out.print("" + (i+1) + ")" + offerings.get(i) + "\t");
 				}
-				System.out.println();
-				System.out.println("Choose an offer to expire it: ");
+				System.out.println("\nChoose an offer to expire it: ");
 				Scanner scanner1 = new Scanner(System.in);
 				int selection = scanner1.nextInt();
 				Reminder reminder = Reminder.getInstance();

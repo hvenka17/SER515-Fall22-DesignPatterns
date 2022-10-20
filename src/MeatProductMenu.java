@@ -7,7 +7,7 @@ public class MeatProductMenu implements ProductMenu {
 	}
 
 	public void showMenu() {
-		System.out.println("1)View meat products\t2)Buy meat product");
+		System.out.println("1)View meat products\t2)Go back");
 		System.out.print("Choose an option: ");
 		Scanner scanner = new Scanner(System.in);
 		int option = scanner.nextInt();

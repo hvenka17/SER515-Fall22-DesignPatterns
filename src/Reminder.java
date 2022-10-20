@@ -13,6 +13,7 @@ public class Reminder {
     }
 
     public void notifyOffering(String productName) {
-        System.out.println("Notifying all buyers about offerings changed for " + productName);
+        Product product = new Product(productName);
+        new ReminderVisitor(this).visitProduct(product);
     }
 }

@@ -1,6 +1,12 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Buyer extends Person {
+
+	private final String userProductsPath = "UserProduct.txt";
 
 	public Buyer(String name) {
 		System.out.println("Instantiating buyer " + name);
@@ -16,7 +22,7 @@ public class Buyer extends Person {
 			if (option == 1) {
 				showProductMenu();
 			} else if (option == 2) {
-				System.out.println("No bids made");
+				System.out.println("Bids by " + this.username + ": " + getBids());
 			} else if (option == 3) {
 				System.out.println("Bye!");
 				break;
@@ -28,6 +34,23 @@ public class Buyer extends Person {
 
 	public ProductMenu CreateProductMenu() {
 		return null;
+	}
+
+	private List<String> getBids() {
+		List<String> productNames = new ArrayList<String>();
+		try {
+			File file = new File(this.userProductsPath);
+			Scanner scanner = new Scanner(file);
+			while (scanner.hasNextLine()) {
+				String line = scanner.nextLine();
+				String[] details = line.split(":");
+				if (details[0].equals(this.username))
+					productNames.add(details[1]);
+			}
+		} catch (FileNotFoundException ex) {
+			System.out.println(ex.getMessage());
+		}
+		return productNames;
 	}
 
 }
