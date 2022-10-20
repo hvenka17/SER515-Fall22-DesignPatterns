@@ -9,14 +9,16 @@ public class Seller extends Person {
 	}
 
 	public void showMenu() {
-		System.out.println("Seller menu:");
-		System.out.println("1)View offerings\t2)Manage offerings\t3)Logout");
 		Scanner scanner = new Scanner(System.in);
 		while (true) {
+			System.out.println("\nSeller menu:");
+			System.out.println("1)View offerings\t2)Manage offerings\t3)Logout");
 			int option = scanner.nextInt();
 			if (option == 1) {
 				OfferingIterator offeringIterator = new OfferingIterator();
 				System.out.println("Offerings: " + offeringIterator.retrieveOfferings(List.of(this.username)));
+				offeringIterator.retrieveOfferings(List.of(this.username)).forEach(offering
+						-> System.out.println(offering.sellerName + " is selling " + offering.productName));
 			} else if (option == 2) {
 				System.out.println("No offerings made");
 			} else if (option == 3) {

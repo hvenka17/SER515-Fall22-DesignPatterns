@@ -12,9 +12,13 @@ public class OfferingList extends ArrayList {
 
 	private List<Offering> offering;
 
+	public OfferingList() {
+		this.offering = new ArrayList<Offering>();
+	}
+
 	public boolean addOffering(String productName, String sellerName) {
 		Offering offering1 = new Offering(productName, sellerName);
-		return offering.add(offering1);
+		return this.offering.add(offering1);
 	}
 
 }
