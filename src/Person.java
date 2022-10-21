@@ -19,11 +19,14 @@ public abstract class Person {
 		System.out.print("Choose an option: ");
 		Scanner scanner = new Scanner(System.in);
 		int option = scanner.nextInt();
+		ProductMenu productMenu = null;
 		if (option == 1) {
-			new MeatProductMenu().showMenu();
+			productMenu = new MeatProductMenu();
 		} else if (option == 2) {
-			new ProduceProductMenu().showMenu();
+			productMenu = new ProduceProductMenu();
 		}
+		if (productMenu != null)
+			productMenu.showMenu();
 	}
 
 	public void showAddButton() {
